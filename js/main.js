@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
             }, time)
         }
 
-        index === 0 ? showIcon(item, 3000) :
-        index === 1 ? showIcon(item, 3700) : showIcon(item, 4300)
+        index === 0 ? showIcon(item, 1500) :
+        index === 1 ? showIcon(item, 2000) : showIcon(item, 2500)
 
-        showIcon(arrow, 4900)
+        showIcon(arrow, 2500)
     })
 
     const smoothScroll = () => {
