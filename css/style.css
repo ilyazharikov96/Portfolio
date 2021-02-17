@@ -1,4 +1,9 @@
+:root {
+    --bottom: 30px;
+}
+
 * {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     margin: 0;
     padding: 0
@@ -14,22 +19,23 @@ body {
     z-index: -1;
     width: 100%;
     color: #fff;
-    font-family: Roboto, sans-serif
+    font-family: 'Montserrat', sans-serif;
 }
+
+
 
 @keyframes downUp {
     0% {
-        bottom: 40px;
+        bottom: calc(var(--bottom) + 10px);
     }
 
     50% {
-        bottom: 30px;
+        bottom: var(--bottom);
     }
 
     100% {
-        bottom: 40px;
+        bottom: calc(var(--bottom) + 10px);
     }
-
 }
 
 .container {
@@ -43,7 +49,7 @@ body {
     position: relative;
     height: 100vh;
     background: #000 url(../img/programming.jpeg) center center/cover no-repeat;
-    z-index: -1;
+    z-index: -1
 }
 
 .promo::before {
@@ -77,52 +83,52 @@ body {
     transform: translate(-50%, 50%);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 .social-item {
     opacity: 0;
     visibility: hidden;
     cursor: pointer;
-    transition: all .3s;
+    transition: all .3s
 }
 
 .social-item.active {
     opacity: .7;
-    visibility: visible;
+    visibility: visible
 }
 
-.social-item + .social-item {
-    margin-left: 20px;
+.social-item+.social-item {
+    margin-left: 20px
 }
 
 .social-img {
     width: 60px;
-    height: 60px;
+    height: 60px
 }
 
 .arrow__img {
     opacity: 0;
     visibility: hidden;
     position: absolute;
-    bottom: 30px;
+    bottom: var(--bottom);
     left: 50%;
     transform: translateX(-50%) rotate(-90deg);
     width: 22px;
     height: 33px;
     cursor: pointer;
     animation: downUp 1s infinite;
-    transition: all .3s;
+    transition: all .3s
 }
 
 .arrow__img.active {
     opacity: 1;
     visibility: visible;
-    transition: all .3s;
+    transition: all .3s
 }
 
 .technologies {
-    font-weight: 700px;
+    font-weight: 700;
     padding: 80px 0;
     height: 100%;
     background: #fff
@@ -156,6 +162,7 @@ body {
     grid-template-rows: repeat(2, minmax(270px, auto));
     gap: 15px
 }
+
 
 .technologies__item-block {
     color: #000;
@@ -241,7 +248,6 @@ body {
 
 .portfolio__img-inner img {
     width: 100%;
-    -o-object-fit: cover;
     object-fit: cover;
     cursor: pointer
 }
@@ -253,11 +259,8 @@ body {
 
     .portfolio__items,
     .technologies__items {
-        display: -ms-grid;
         display: grid;
-        -ms-grid-columns: (270px)[3];
         grid-template-columns: repeat(3, 270px);
-        -ms-grid-rows: (minmax(270, auto))[3];
         grid-template-rows: repeat(3, minmax(270, auto));
         gap: 0;
         row-gap: 30px
@@ -283,18 +286,23 @@ body {
 }
 
 @media (max-width:778px) {
+
+    :root {
+        --bottom: 90px;
+    }
+
     .promo__title {
         font-size: 30px
     }
 
     .social-item.active {
         opacity: 1;
-        visibility: visible;
+        visibility: visible
     }
 
     .social-img {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px
     }
 }
 
@@ -307,7 +315,7 @@ body {
 
     .title {
         font-size: 22px;
-        margin-bottom: 45px;
+        margin-bottom: 45px
     }
 
     .portfolio__items,
@@ -369,6 +377,6 @@ body {
 
     .social-item:hover {
         opacity: 1;
-        transition: all .3s;
+        transition: all .3s
     }
 }
