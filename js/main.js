@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     $('.promo__title').typeIt({});
 
     const socialIcons = document.querySelectorAll('.social-item'),
-          smoothLinks = document.querySelectorAll('a[href^="#"]');
-          arrow = document.querySelector('.arrow__img')
+          smoothLinks = document.querySelectorAll('a[href^="#"]'),
+          arrow = document.querySelector('.arrow__img');
 
     socialIcons.forEach((item, index) => {
         function showIcon(icon, time) {
