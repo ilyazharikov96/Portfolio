@@ -287,8 +287,12 @@ body {
 
 @media (max-width:778px) {
 
-    :root {
-        --bottom: 90px;
+    .promo {
+        height: calc(100vh - 50px);
+    }
+
+    .promo::before {
+        height: calc(100vh - 50px);
     }
 
     .promo__title {
